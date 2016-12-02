@@ -19,11 +19,11 @@ export function clone(date) {
 }
 
 export function toString(date) {
-  const year = date.getFullYear();
-  const month = pad((date.getMonth() + 1).toString(), 2);
-  const day = pad(date.getDay().toString(), 2);
-
-  return `${year}-${month}-${day}`;
+  const fullYear = date.getFullYear();
+  const fullMonth = pad((date.getMonth()+1).toString(), 2);
+  const fullDay = pad(date.getDate().toString(), 2);
+  
+  return  `${fullYear}-${fullMonth}-${fullDay}`; 
 }
 
 export function toDayOfMonthString(date) {
