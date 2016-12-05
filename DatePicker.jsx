@@ -56,10 +56,10 @@ export class DatePicker extends React.Component {
   }
 
   hideOnDocumentClick(e) {
-    if (e.target.className !== 'date-picker-trigger-' + this.state.id && 
-      !this.parentsHaveClassName(e.target, 'ardp-calendar-' + this.state.id)) {
+    if (e.target.className !== `date-picker-trigger-${this.state.id}` &&
+      !this.parentsHaveClassName(e.target, `ardp-calendar-${this.state.id}`)) {
         this.hide();
-    }
+      }
   }
 
   parentsHaveClassName(element, className) {
